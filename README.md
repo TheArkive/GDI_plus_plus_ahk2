@@ -8,16 +8,14 @@ I have transcribed both these versions for AHK v2 a129.  So I can't take credit 
 
 As for my lib, I have to give special thanks to several individuals whose work has helped me understand GDI/+ to a level where I was able to make my lib what it is now:
 
-mmikeww (guest3456)
-robodesign
-just me - for his work on MDMF, it's rather crutial for GDI/+
-
-And other users that I know of who contributed to these older libs / examples, as well as answering some questions that let me to this point:
-
-isahound
-lexikos
-
-And a special thanks to `robodesign`, who answered the MAJOR bulk of my questions (and there are more to come ;)
+* [mention]tic[/mention] for the original [c]gdip.ahk[/c]
+* [mention]Rseding91[/mention] for the original Unicode rewrite of tic's lib
+* [mention]robodesign[/mention] who answered MANY of my questions about the concepts behind GDI+.  And for his work on his version of [c]Gdip_all.ahk[/c]
+* [mention]guest3456[/mention] (mmikeww?) for the AHK v2 a108 rewrite [c]Gdip_all.ahk[/c] and examples.  I learned a lot from those.
+I know a few others participated in this original project like [color=#00BFFF]just me[/color], and [mention]isahound[/mention]
+* Thanks to [mention]GeekDude[/mention] for his work on [c]gdi.ahk[/c].  I referenced this old lib a lot and I will continue to do so.
+* I have to thank [mention]just me[/mention] again for teaching me about structure byte alignment (way back when) which has got me to the point where I can understand much more of docs.microsoft.com documentation.
+* And as always thanks to @lexikos for AHK v2, and for taking the time to answer some of my (occasionally malformed) questions.
 
 ========================================================================
 
