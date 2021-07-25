@@ -78,7 +78,7 @@ If !(FileObject := FileOpen("Gdip.tutorial.file-fish.bra", "r")) {
 	ExitApp
 }
 FileObjLength := (SubStr(A_AhkVersion,1,1) < 2) ? FileObject.Length() : FileObject.Length
-FileObject.RawRead(BRA:=BufferAlloc(FileObjLength), FileObjLength)
+FileObject.RawRead(BRA:=Buffer(FileObjLength), FileObjLength)
 FileObject.Close()
 
 ; Get a count of the number of files contained in the BRA

@@ -8,8 +8,13 @@ OnMessage(0x20A, OnWM_MOUSEWHEEL)
 
 ;Create a GUI
 Mapper := Gui("-DPIScale +OwnDialogs")
+Mapper.OnEvent("close",gui_close)
 Mapper.Show("NA w600 h600")
 hMap := Mapper.hwnd
+
+gui_close(g) {
+    ExitApp
+}
 
 Global w, h, pToken, hbm, G, hdc, pPath, obm, pPen, hGui
 ;Create a Layered window ontop if the GUI to draw on with the GDI+ functions

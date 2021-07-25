@@ -11,8 +11,13 @@ H := 200
 GdipToken := Gdip_Startup()
 
 Gui1 := Gui("+LastFound +AlwaysOnTop +OwnDialogs")
+Gui1.OnEvent("close",gui_close)
 hGui := Gui1.hwnd
 Gui1.Title := "Path gradients"
+
+gui_close(g) {
+    ExitApp
+}
 
 ctrlPicA := Gui1.Add("Picture" , "w" w " h" h)
 hpic := ctrlPicA.hwnd

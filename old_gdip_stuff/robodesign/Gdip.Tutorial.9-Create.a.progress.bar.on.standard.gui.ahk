@@ -11,8 +11,6 @@
 ; Uncomment if Gdip.ahk is not in your standard library
 #Include Gdip_All.ahk
 
-.ahk
-
 ; Start gdi+
 If !pToken := Gdip_Startup()
 {
