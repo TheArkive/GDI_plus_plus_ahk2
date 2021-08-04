@@ -2,7 +2,7 @@ The `old_gdip_stuff` folder contains the old `gdip_all.ahk` and examples release
 
 I've also included the `gdip_all.ahk` created by `robodesign`, with many more GDI+ functions and a few more examples.
 
-I have transcribed both these versions for AHK v2 a129.  So I can't take credit for anything here.  Those parts is not my original work.
+I have transcribed both these versions for AHK v2 beta.1, so I can't take credit for anything here.  Those parts is not my original work.
 
 ========================================================================
 
