@@ -5313,8 +5313,9 @@ Gdip_GetLockBitPixel(Scan0, x, y, Stride) {
 }
 
 ;#####################################################################################
+; Gdip_PixelateBitmap() - source code + mcode
+;#####################################################################################
 
-Gdip_PixelateBitmap(pBitmap, &pBitmapOut, BlockSize) {
 /*
 C/C++ Function by Tic and fixed by Fincs;
 https://autohotkey.com/board/topic/29449-gdi-standard-library-145-by-tic/page-55
@@ -5466,6 +5467,7 @@ int __stdcall Gdip_PixelateBitmap(unsigned char * sBitmap, unsigned char * dBitm
 
 */
 
+Gdip_PixelateBitmap(pBitmap, &pBitmapOut, BlockSize) {
    static PixelateBitmap:=0
    if (!PixelateBitmap)
    {
