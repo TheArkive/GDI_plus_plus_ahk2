@@ -1044,7 +1044,7 @@ Gdip_DrawLines(pGraphics, pPen, Points)
 	for eachPoint, Point in Points
 	{
 		Coord := StrSplit(Point, ",")
-		NumPut(Coord[1], PointF, 8*(A_Index-1), "float"), NumPut(Coord[2], PointF, (8*(A_Index-1))+4, "float")
+		NumPut("Float", Coord[1], PointF, 8 * (A_Index - 1)), NumPut("Float", Coord[2], PointF, (8 * (A_Index - 1)) + 4)
 	}
 	return DllCall("gdiplus\GdipDrawLines", "UPtr", pGraphics, "UPtr", pPen, "UPtr", PointF.ptr, "int", PointsLength)
 }
@@ -1132,7 +1132,8 @@ Gdip_FillPolygon(pGraphics, pBrush, Points, FillMode:=0)
 	For eachPoint, Point in Points
 	{
 		Coord := StrSplit(Point, ",")
-		NumPut(Coord[1], PointF, 8*(A_Index-1), "float"), NumPut(Coord[2], PointF, (8*(A_Index-1))+4, "float")
+		NumPut("Float", Coord[1], PointF, 8 * (A_Index - 1))
+		, NumPut("Float", Coord[2], PointF, (8 * (A_Index - 1)) + 4)
 	}
 	return DllCall("gdiplus\GdipFillPolygon", "UPtr", pGraphics, "UPtr", pBrush, "UPtr", PointF.ptr, "int", PointsLength, "int", FillMode)
 }
