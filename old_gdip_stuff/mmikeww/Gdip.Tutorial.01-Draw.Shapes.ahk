@@ -18,7 +18,7 @@ If !pToken := Gdip_Startup()
 	MsgBox "Gdiplus failed to start. Please ensure you have gdiplus on your system"
 	ExitApp
 }
-OnExit(ExitFunc)
+OnExit((ExitReason, ExitCode) => Gdip_Shutdown(pToken))
 
 ; Set the width and height we want as our drawing area, to draw everything in. This will be the dimensions of our bitmap
 Width :=1400, Height := 1050
@@ -91,11 +91,3 @@ Gdip_DeleteGraphics(G)
 Return
 
 ;#######################################################################
-
-ExitFunc(ExitReason, ExitCode)
-{
-   global
-   ; gdi+ may now be shutdown on exiting the program
-   Gdip_Shutdown(pToken)
-}
-
