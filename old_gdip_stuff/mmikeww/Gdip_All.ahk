@@ -2727,7 +2727,7 @@ Gdip_UnlockBits(pBitmap, &BitmapData) ; not sure &VarRef is needed here...
 
 Gdip_SetLockBitPixel(ARGB, Scan0, x, y, Stride)
 {
-    Numput(ARGB, Scan0+0, (x*4)+(y*Stride), "UInt")
+    Numput("UInt", ARGB, Scan0+0, (x*4)+(y*Stride))
 }
 
 ;#####################################################################################
