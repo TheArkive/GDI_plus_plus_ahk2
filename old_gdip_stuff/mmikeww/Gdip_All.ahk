@@ -1611,7 +1611,7 @@ Gdip_SaveBitmapToFile(pBitmap, sOutput, Quality:=75)
         nSize := DllCall("MultiByteToWideChar", "UInt", 0, "UInt", 0, "UPtr", StrPtr(sOutput), "Int", -1, "UPtr", 0, "Int", 0)
         wOutput := Buffer(nSize*2)
         DllCall("MultiByteToWideChar", "UInt", 0, "UInt", 0, "UPtr", StrPtr(sOutput), "Int", -1, "UPtr", wOutput.Ptr, "Int", nSize)
-        VarSetStrCapacity(wOutput, -1)
+        VarSetStrCapacity(&wOutput, -1)
         if !wOutput.size
             return -4
         _E := DllCall("gdiplus\GdipSaveImageToFile", "UPtr", pBitmap, "UPtr", wOutput.Ptr, "UPtr", pCodec, "UInt", _p)
